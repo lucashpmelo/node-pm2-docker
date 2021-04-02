@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apinodepm2
+    image: apinodepm2
+    ports:
+      - 3001:3001
+    restart: always
+    volumes:
+      - .:/usr/app
+      - node_modules_pm2:/usr/app/node_modules
+
+volumes:
+  node_modules_pm2:
