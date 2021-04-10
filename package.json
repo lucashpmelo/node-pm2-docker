@@ -7,7 +7,7 @@
     "node-pm2-docker": "server.js"
   },
   "scripts": {
-    "deploy": "pm2-runtime --watch ./bin/server.js",
+    "deploy": "pm2-runtime ./ecosystem.config.js",
     "start": "node ./bin/server.js"
   },
   "repository": {
